@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import Characters from './components/Characters';
-import Locations from './components/Locations';
-import Episodes from './components/Episodes';
+import Characters from './containers/Characters';
+import Locations from './containers/Locations';
+import Episodes from './containers/Episodes';
 
 /* 
 	todo
