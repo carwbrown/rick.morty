@@ -1,0 +1,12 @@
+.CardWrapper {
+	width: 20rem;
+	border: 1px solid #9e9e9e;
+	margin: 1rem;
+	padding: 1rem;
+	border-radius: 5px;
+}
+
+.CardImage {
+	height: 5rem;
+	width: 5rem;
+}

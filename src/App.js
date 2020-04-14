@@ -1,23 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Characters from './components/Characters';
+import Locations from './components/Locations';
+import Episodes from './components/Episodes';
+
+/* 
+	todo
+	finish styling cards
+	tab navigation for different sections
+	pagination for the different tabbed sections
+	try doing some simple stuff with GQL / Apollo
+*/
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+				<h1>Rick and Morty Information</h1>
+        <Characters />
+        <Locations />
+        <Episodes />
       </header>
     </div>
   );
