@@ -7,7 +7,6 @@ const fetchCharacters = async currentPage => {
     `https://rickandmortyapi.com/api/character/?page=${currentPage}`
   );
   const getCharacterData = await characterDataRes.json();
-  console.log("getCharacterData: ", getCharacterData);
   return getCharacterData;
 };
 
