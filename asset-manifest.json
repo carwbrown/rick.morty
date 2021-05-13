@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/rick.morty/static/css/main.808e9633.chunk.css",
-    "main.js": "/rick.morty/static/js/main.b04d3d61.chunk.js",
-    "main.js.map": "/rick.morty/static/js/main.b04d3d61.chunk.js.map",
+    "main.css": "/rick.morty/static/css/main.51edafed.chunk.css",
+    "main.js": "/rick.morty/static/js/main.7ff1bb59.chunk.js",
+    "main.js.map": "/rick.morty/static/js/main.7ff1bb59.chunk.js.map",
     "runtime-main.js": "/rick.morty/static/js/runtime-main.e17239ca.js",
     "runtime-main.js.map": "/rick.morty/static/js/runtime-main.e17239ca.js.map",
-    "static/js/2.6ac50824.chunk.js": "/rick.morty/static/js/2.6ac50824.chunk.js",
-    "static/js/2.6ac50824.chunk.js.map": "/rick.morty/static/js/2.6ac50824.chunk.js.map",
+    "static/js/2.075f1cad.chunk.js": "/rick.morty/static/js/2.075f1cad.chunk.js",
+    "static/js/2.075f1cad.chunk.js.map": "/rick.morty/static/js/2.075f1cad.chunk.js.map",
     "index.html": "/rick.morty/index.html",
-    "precache-manifest.2958907f4486cc56eac858b42bb5cb41.js": "/rick.morty/precache-manifest.2958907f4486cc56eac858b42bb5cb41.js",
+    "precache-manifest.32411777f076f9597a40a2e37f8913c4.js": "/rick.morty/precache-manifest.32411777f076f9597a40a2e37f8913c4.js",
     "service-worker.js": "/rick.morty/service-worker.js",
-    "static/css/main.808e9633.chunk.css.map": "/rick.morty/static/css/main.808e9633.chunk.css.map",
-    "static/js/2.6ac50824.chunk.js.LICENSE.txt": "/rick.morty/static/js/2.6ac50824.chunk.js.LICENSE.txt"
+    "static/css/main.51edafed.chunk.css.map": "/rick.morty/static/css/main.51edafed.chunk.css.map",
+    "static/js/2.075f1cad.chunk.js.LICENSE.txt": "/rick.morty/static/js/2.075f1cad.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e17239ca.js",
-    "static/js/2.6ac50824.chunk.js",
-    "static/css/main.808e9633.chunk.css",
-    "static/js/main.b04d3d61.chunk.js"
+    "static/js/2.075f1cad.chunk.js",
+    "static/css/main.51edafed.chunk.css",
+    "static/js/main.7ff1bb59.chunk.js"
   ]
 }
