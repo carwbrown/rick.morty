@@ -1,19 +1,32 @@
-import React, { useEffect, useCallback, useState } from "react";
+import React, { useEffect, useCallback, useState, ChangeEvent } from "react";
 import InformationCard from "../../components/InformationCard";
 import usePagination from "../../hooks/usePagination";
 
-const fetchCharacters = async currentPage => {
+const fetchCharacters = async (currentPage: number) => {
   const characterDataRes = await fetch(
-    `https://rickandmortyapi.com/api/character/?page=${currentPage}`
+    `https://rickandmortyapi.com/api/character/?page=${currentPage}`,
   );
   const getCharacterData = await characterDataRes.json();
   return getCharacterData;
 };
 
-const Characters = () => {
+interface ICharacter {
+  id: string;
+  name: string;
+  image: string;
+  status: string;
+  location: {
+    name: string;
+  };
+  created: string;
+}
+
+export const Characters = () => {
   const [loading, setLoading] = useState(false);
   const [characters, setCharacters] = useState([]);
-  const [saveTimeout, setSaveTimeout] = useState();
+  const [saveTimeout, setSaveTimeout] = useState<
+    ReturnType<typeof setTimeout>
+  >();
 
   const {
     currentPage,
@@ -21,7 +34,7 @@ const Characters = () => {
     maxPage,
     next,
     prev,
-    setMaxPage
+    setMaxPage,
   } = usePagination();
 
   const fetchData = useCallback(async () => {
@@ -52,19 +65,19 @@ const Characters = () => {
     return <div>Loading Characters...</div>;
   }
 
-  const handleOnChange = event => {
-    clearTimeout(saveTimeout);
-    const newPage = event.target.value;
+  const handleOnChange = (event: ChangeEvent<HTMLInputElement>) => {
+    saveTimeout || clearTimeout(saveTimeout);
+    const newPage = event?.target?.value;
 
     setSaveTimeout(
       setTimeout(() => {
         jumpTo(newPage);
-      }, 1000)
+      }, 1000),
     );
   };
   return (
     <div>
-      <h2>Characters</h2>
+      <div className="SectionTitles">Characters</div>
       <button onClick={prev} disabled={currentPage === 1}>
         Prev
       </button>
@@ -78,14 +91,13 @@ const Characters = () => {
         Jump to Page: <input name="pageNumber" onChange={handleOnChange} />
       </div>
       <div className="InformationSection">
-        {characters.map(character => (
+        {characters.map((character: ICharacter) => (
           <InformationCard
             key={character.id}
             id={character.id}
             name={character.name}
             image={character.image}
             status={character.status}
-            origin={character.origin}
             currentLocation={character.location.name}
             created={character.created}
           />
@@ -94,5 +106,3 @@ const Characters = () => {
     </div>
   );
 };
-
-export default Characters;

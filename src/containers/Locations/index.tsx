@@ -1,22 +1,27 @@
 import React, { useEffect, useState } from "react";
 
-const Locations = () => {
+interface ILocation {
+  id: string;
+  name: string;
+}
+
+export const Locations = () => {
   const [loading, setLoading] = useState(true);
   const [locations, setLocations] = useState([]);
 
   useEffect(() => {
     setLoading(true);
     fetch(`https://rickandmortyapi.com/api/location/`)
-      .then(res => res.json())
+      .then((res) => res.json())
       .then(
-        locations => {
+        (locations) => {
           setLocations(locations.results);
         },
-        error => {
+        (error) => {
           console.warn(error);
-        }
+        },
       )
-      .catch(err => console.warn(err));
+      .catch((err) => console.warn(err));
     setLoading(false);
   }, []);
 
@@ -25,12 +30,10 @@ const Locations = () => {
   }
   return (
     <div>
-      <h2>Locations</h2>
-      {locations.map(location => (
+      <div className="SectionTitles">Locations</div>
+      {locations.map((location: ILocation) => (
         <div key={location.id}>{location.name}</div>
       ))}
     </div>
   );
 };
-
-export default Locations;

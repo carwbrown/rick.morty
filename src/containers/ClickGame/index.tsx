@@ -1,9 +1,9 @@
 import React from "react";
 
-const ClickGame = () => {
+export const ClickGame = () => {
   const [timer, setTimer] = React.useState(10);
   const [count, setCount] = React.useState(0);
-  const id = React.useRef(null);
+  const id = React.useRef<any>(null);
 
   const clear = () => clearTimeout(id.current);
 
@@ -32,5 +32,3 @@ const ClickGame = () => {
     </div>
   );
 };
-
-export default ClickGame;

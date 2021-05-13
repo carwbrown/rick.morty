@@ -1,20 +1,23 @@
 import React, { useEffect, useCallback, useState } from "react";
 
 const fetchEpisodes = () => {
-  return fetch(`https://rickandmortyapi.com/api/episode/`).then(res =>
-    res.json()
+  return fetch(`https://rickandmortyapi.com/api/episode/`).then((res) =>
+    res.json(),
   );
 };
-
-const Episodes = () => {
+interface IEpisode {
+  id: string;
+  name: string;
+}
+export const Episodes = () => {
   const [loading, setLoading] = useState(true);
   const [episodes, setEpisodes] = useState([]);
 
   const fetchData = useCallback(async () => {
     setLoading(true);
     fetchEpisodes()
-      .then(eps => setEpisodes(eps.results))
-      .catch(err => console.warn(err));
+      .then((eps) => setEpisodes(eps.results))
+      .catch((err) => console.warn(err));
 
     setLoading(false);
   }, []);
@@ -28,12 +31,10 @@ const Episodes = () => {
   }
   return (
     <div>
-      <h2>Episodes</h2>
-      {episodes.map(episode => (
+      <div className="SectionTitles">Episodes</div>
+      {episodes.map((episode: IEpisode) => (
         <div key={episode.id}>{episode.name}</div>
       ))}
     </div>
   );
 };
-
-export default Episodes;

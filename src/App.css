@@ -1,12 +1,23 @@
-html, body {
-	background: #fff;
-	padding: 0 2rem 2rem 2rem;
-
+html,
+body {
+  background: #fff;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+.AppContainer {
+  padding: 2rem 2rem 2rem 2rem;
 }
 
-.InformationSection{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
+.InformationSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.SectionTitles {
+  font-size: 1.5rem;
+  padding: 1rem 0;
 }

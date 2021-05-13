@@ -6,10 +6,16 @@ const InformationCard = ({
   name,
   id,
   image,
-  origin,
   status,
   currentLocation,
-  created
+  created,
+}: {
+  name: string;
+  id: string;
+  image: string;
+  status: string;
+  currentLocation: string;
+  created: string;
 }) => {
   return (
     <div className="CardWrapper" key={id}>
