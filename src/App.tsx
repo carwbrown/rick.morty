@@ -9,14 +9,6 @@ import { Form } from "./containers/Form";
 import { NavBar } from "./components/NavBar";
 import { LocationsGQL } from "./containers/LocationsGQL";
 
-/* 
-	todo
-	finish styling cards
-	tab navigation for different sections
-	pagination for the different tabbed sections
-	try doing some simple stuff with GQL / Apollo
-*/
-
 function App() {
   return (
     <div className="App">
